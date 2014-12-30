@@ -1,0 +1,422 @@
+[Mon Dec 29 21:37:14 2014] [info] Listening at "4546".
+[Mon Dec 29 21:37:52 2014] [info] Listening at "http://*:4546".
+[Mon Dec 29 21:37:56 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Dec 29 21:37:56 2014] [debug] GET "/".
+[Mon Dec 29 21:37:56 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Mon Dec 29 21:37:56 2014] [debug] Rendering template "example/welcome.html.ep".
+[Mon Dec 29 21:37:56 2014] [debug] Rendering template "layouts/default.html.ep".
+[Mon Dec 29 21:37:56 2014] [debug] 200 OK (0.005415s, 184.672/s).
+[Mon Dec 29 21:37:58 2014] [debug] GET "/".
+[Mon Dec 29 21:37:58 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Mon Dec 29 21:37:58 2014] [debug] Rendering cached template "example/welcome.html.ep".
+[Mon Dec 29 21:37:58 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Mon Dec 29 21:37:58 2014] [debug] 200 OK (0.001543s, 648.088/s).
+[Mon Dec 29 21:38:01 2014] [debug] GET "/".
+[Mon Dec 29 21:38:01 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Mon Dec 29 21:38:01 2014] [debug] Rendering cached template "example/welcome.html.ep".
+[Mon Dec 29 21:38:01 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Mon Dec 29 21:38:01 2014] [debug] 200 OK (0.001491s, 670.691/s).
+[Mon Dec 29 23:20:58 2014] [info] Listening at "http://*:4546".
+[Tue Dec 30 11:27:11 2014] [info] Listening at "http://*:4545".
+[Tue Dec 30 11:27:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 11:27:15 2014] [debug] GET "/".
+[Tue Dec 30 11:27:15 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Tue Dec 30 11:27:15 2014] [debug] Rendering template "example/welcome.html.ep".
+[Tue Dec 30 11:27:15 2014] [debug] Rendering template "layouts/default.html.ep".
+[Tue Dec 30 11:27:15 2014] [debug] 200 OK (0.005259s, 190.150/s).
+[Tue Dec 30 11:27:21 2014] [debug] GET "/ext/".
+[Tue Dec 30 11:27:21 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 11:27:21 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 11:27:21 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 11:27:21 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 11:27:21 2014] [debug] 404 Not Found (0.031351s, 31.897/s).
+[Tue Dec 30 11:45:44 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 11:45:44 2014] [debug] GET "/".
+[Tue Dec 30 11:45:44 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Tue Dec 30 11:45:44 2014] [debug] Rendering template "example/welcome.html.ep".
+[Tue Dec 30 11:45:44 2014] [debug] Rendering template "layouts/default.html.ep".
+[Tue Dec 30 11:45:44 2014] [debug] 200 OK (0.005858s, 170.707/s).
+[Tue Dec 30 11:45:48 2014] [debug] GET "/".
+[Tue Dec 30 11:45:48 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Tue Dec 30 11:45:48 2014] [debug] Rendering cached template "example/welcome.html.ep".
+[Tue Dec 30 11:45:48 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Tue Dec 30 11:45:48 2014] [debug] 200 OK (0.001472s, 679.348/s).
+[Tue Dec 30 11:48:42 2014] [debug] GET "/favicon.png".
+[Tue Dec 30 11:48:42 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 11:48:42 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 11:48:42 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 11:48:42 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 11:48:42 2014] [debug] 404 Not Found (0.028685s, 34.861/s).
+[Tue Dec 30 11:49:05 2014] [debug] GET "/favicon.png".
+[Tue Dec 30 11:49:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 11:49:05 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 11:49:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 11:49:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 11:49:05 2014] [debug] 404 Not Found (0.005525s, 180.995/s).
+[Tue Dec 30 12:03:58 2014] [debug] GET "/".
+[Tue Dec 30 12:03:58 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Tue Dec 30 12:03:58 2014] [debug] Rendering cached template "example/welcome.html.ep".
+[Tue Dec 30 12:03:58 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Tue Dec 30 12:03:58 2014] [debug] 200 OK (0.001569s, 637.349/s).
+[Tue Dec 30 12:03:59 2014] [debug] GET "/".
+[Tue Dec 30 12:03:59 2014] [debug] Routing to controller "MiaNet::Controller::Example" and action "welcome".
+[Tue Dec 30 12:03:59 2014] [debug] Rendering cached template "example/welcome.html.ep".
+[Tue Dec 30 12:03:59 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Tue Dec 30 12:03:59 2014] [debug] 200 OK (0.001537s, 650.618/s).
+[Tue Dec 30 12:37:14 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:37:15 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:37:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:38:20 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:38:30 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:38:50 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:38:50 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:40:32 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:40:32 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:41:24 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:41:24 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:42:37 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:42:44 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:42:44 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:44:45 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:44:46 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:33 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:34 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:36 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:37 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:38 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:39 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:41 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:45:42 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:46:59 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:47:16 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:47:16 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:47:55 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:47:55 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:48:25 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:49:07 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:49:09 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:49:09 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:49:45 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:49:45 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:50:00 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:50:00 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:50:23 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:50:25 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:50:25 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:50:35 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:50:35 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:50:38 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:50:38 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:51:10 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:51:10 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:51:38 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:51:38 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:51:54 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:51:54 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:52:05 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:52:05 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:52:16 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:52:16 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:52:25 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:52:25 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:52:37 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:52:37 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:55:58 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:56:11 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:56:36 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:56:37 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:56:37 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 12:56:43 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 12:56:43 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:06:03 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:08:17 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:08:43 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:09:29 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:09:39 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:10:19 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:11:01 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:11:39 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:11:56 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:27:50 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:27:50 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:27:50 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 13:27:50 2014] [debug] Routing to controller "MiaNet::Controller::List" and action "list".
+[Tue Dec 30 13:27:50 2014] [debug] Got table name: Unit
+[Tue Dec 30 13:27:50 2014] [debug] 200 OK (0.083308s, 12.004/s).
+[Tue Dec 30 13:27:58 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:27:58 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:27:58 2014] [debug] GET "/ApprovalStatus/list".
+[Tue Dec 30 13:27:58 2014] [debug] Routing to controller "MiaNet::Controller::List" and action "list".
+[Tue Dec 30 13:27:58 2014] [debug] Got table name: ApprovalStatus
+[Tue Dec 30 13:27:58 2014] [debug] 200 OK (0.065302s, 15.313/s).
+[Tue Dec 30 13:28:23 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:28:23 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:28:23 2014] [debug] GET "/Users/list".
+[Tue Dec 30 13:28:23 2014] [debug] Routing to controller "MiaNet::Controller::List" and action "list".
+[Tue Dec 30 13:28:23 2014] [debug] Got table name: Users
+[Tue Dec 30 13:28:23 2014] [error] DBIx::Class::Schema::source(): Can't find source for Users at lib/MiaNet.pm line 18
+
+[Tue Dec 30 13:28:23 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 13:28:23 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 13:28:23 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 13:28:23 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 13:28:23 2014] [debug] 500 Internal Server Error (0.060031s, 16.658/s).
+[Tue Dec 30 13:28:27 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:28:27 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:28:27 2014] [debug] GET "/User/list".
+[Tue Dec 30 13:28:27 2014] [debug] Routing to controller "MiaNet::Controller::List" and action "list".
+[Tue Dec 30 13:28:27 2014] [debug] Got table name: User
+[Tue Dec 30 13:28:27 2014] [debug] 200 OK (0.067172s, 14.887/s).
+[Tue Dec 30 13:52:08 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:52:50 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:53:27 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:53:34 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:53:34 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:53:34 2014] [debug] GET "/User/list".
+[Tue Dec 30 13:53:34 2014] [debug] Controller "MiaNet::Crud" does not exist.
+[Tue Dec 30 13:53:34 2014] [debug] Template "crud/list.html.ep" not found.
+[Tue Dec 30 13:53:34 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 13:53:34 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 13:53:34 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 13:53:34 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 13:53:34 2014] [debug] 404 Not Found (0.024768s, 40.375/s).
+[Tue Dec 30 13:54:28 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:54:31 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:54:31 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:54:31 2014] [debug] GET "/User/list".
+[Tue Dec 30 13:54:31 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 13:54:31 2014] [debug] Got table name: User
+[Tue Dec 30 13:54:31 2014] [debug] 200 OK (0.067130s, 14.896/s).
+[Tue Dec 30 13:55:42 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:55:42 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:55:46 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 13:55:46 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 13:59:49 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:02:52 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:03:32 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 14:03:32 2014] [error] Missing right curly or square bracket at lib/MiaNet/Controller/CRUD.pm line 31, at end of line
+syntax error at lib/MiaNet/Controller/CRUD.pm line 31, at EOF
+Compilation failed in require at (eval 342) line 1.
+
+[Tue Dec 30 14:03:32 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 14:03:32 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 14:03:32 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 14:03:32 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 14:03:32 2014] [debug] 500 Internal Server Error (0.028703s, 34.840/s).
+[Tue Dec 30 14:04:07 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:04:07 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:04:07 2014] [debug] GET "/User/list".
+[Tue Dec 30 14:04:07 2014] [error] Missing right curly or square bracket at lib/MiaNet/Controller/CRUD.pm line 31, at end of line
+syntax error at lib/MiaNet/Controller/CRUD.pm line 31, at EOF
+Compilation failed in require at (eval 343) line 1, <DATA> line 2231.
+
+[Tue Dec 30 14:04:07 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 14:04:07 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 14:04:07 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 14:04:07 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 14:04:07 2014] [debug] 500 Internal Server Error (0.024826s, 40.280/s).
+[Tue Dec 30 14:04:22 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:04:22 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:04:22 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:04:22 2014] [debug] GET "/User/list".
+[Tue Dec 30 14:04:22 2014] [error] Missing right curly or square bracket at lib/MiaNet/Controller/CRUD.pm line 31, at end of line
+syntax error at lib/MiaNet/Controller/CRUD.pm line 31, at EOF
+Compilation failed in require at (eval 343) line 1, <DATA> line 2231.
+
+[Tue Dec 30 14:04:22 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 14:04:22 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 14:04:22 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 14:04:22 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 14:04:22 2014] [debug] 500 Internal Server Error (0.024515s, 40.791/s).
+[Tue Dec 30 14:04:40 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:04:41 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:04:41 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:04:41 2014] [debug] GET "/User/list".
+[Tue Dec 30 14:04:41 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 14:04:41 2014] [debug] Got table name: User
+[Tue Dec 30 14:04:41 2014] [debug] 200 OK (0.067130s, 14.896/s).
+[Tue Dec 30 14:04:46 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:04:46 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 14:04:46 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 14:04:46 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:04:46 2014] [debug] 200 OK (0.067923s, 14.723/s).
+[Tue Dec 30 14:05:32 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 14:05:32 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 14:05:32 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:05:32 2014] [debug] 200 OK (0.003742s, 267.237/s).
+[Tue Dec 30 14:06:11 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 14:06:11 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 14:06:11 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:06:11 2014] [debug] 200 OK (0.002830s, 353.357/s).
+[Tue Dec 30 14:06:51 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 14:06:51 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 14:06:51 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:06:51 2014] [debug] 200 OK (0.003303s, 302.755/s).
+[Tue Dec 30 14:08:29 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 14:08:29 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 14:08:29 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:08:29 2014] [debug] 200 OK (0.003339s, 299.491/s).
+[Tue Dec 30 14:33:23 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:34:06 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:36:21 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:37:00 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:37:14 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:42:48 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:42:48 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:42:48 2014] [debug] POST "/Unit/create".
+[Tue Dec 30 14:42:48 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "create".
+[Tue Dec 30 14:42:48 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:42:48 2014] [error] Missing or empty input at lib/MiaNet/Controller/CRUD.pm line 28.
+
+[Tue Dec 30 14:42:48 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 14:42:48 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 14:42:48 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 14:42:48 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 14:42:48 2014] [debug] 500 Internal Server Error (0.060646s, 16.489/s).
+[Tue Dec 30 14:43:46 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:43:48 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:43:48 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:43:48 2014] [debug] POST "/Unit/create".
+[Tue Dec 30 14:43:48 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "create".
+[Tue Dec 30 14:43:48 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:43:48 2014] [error] Can't locate object method "content_type" via package "Mojo::Message::Request" at lib/MiaNet/Controller/CRUD.pm line 28, <DATA> line 2231.
+
+[Tue Dec 30 14:43:48 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 14:43:48 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 14:43:48 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 14:43:48 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 14:43:48 2014] [debug] 500 Internal Server Error (0.063695s, 15.700/s).
+[Tue Dec 30 14:45:06 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:45:08 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:45:08 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:45:08 2014] [debug] POST "/Unit/create".
+[Tue Dec 30 14:45:08 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "create".
+[Tue Dec 30 14:45:08 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:45:08 2014] [debug] 200 OK (0.230002s, 4.348/s).
+[Tue Dec 30 14:45:42 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:50:40 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:51:01 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:51:01 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:51:01 2014] [debug] POST "/Unit/create".
+[Tue Dec 30 14:51:01 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "create".
+[Tue Dec 30 14:51:01 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:51:01 2014] [error] DBIx::Class::Storage::DBI::_dbh_execute(): DBI Exception: DBD::SQLite::st execute failed: UNIQUE constraint failed: units.name [for Statement "INSERT INTO units ( name, type) VALUES ( ?, ? )"] at lib/MiaNet/Controller/CRUD.pm line 29
+
+[Tue Dec 30 14:51:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Tue Dec 30 14:51:01 2014] [debug] Template "exception.html.ep" not found.
+[Tue Dec 30 14:51:01 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 14:51:01 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 14:51:02 2014] [debug] 500 Internal Server Error (0.137086s, 7.295/s).
+[Tue Dec 30 14:51:23 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:51:23 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:51:23 2014] [debug] POST "/Unit/create".
+[Tue Dec 30 14:51:23 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "create".
+[Tue Dec 30 14:51:23 2014] [debug] Got table name: Unit
+[Tue Dec 30 14:51:23 2014] [debug] 200 OK (0.335008s, 2.985/s).
+[Tue Dec 30 14:52:19 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:52:39 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:52:39 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:52:39 2014] [debug] POST "/User/create".
+[Tue Dec 30 14:52:39 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "create".
+[Tue Dec 30 14:52:39 2014] [debug] Got table name: User
+[Tue Dec 30 14:52:39 2014] [debug] 200 OK (0.228968s, 4.367/s).
+[Tue Dec 30 14:54:15 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:54:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 14:56:04 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 14:56:04 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 15:29:44 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:29:44 2014] [info] Listening at "http://*:4546".
+[Tue Dec 30 15:29:50 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:29:50 2014] [info] Listening at "https://*:4546".
+[Tue Dec 30 15:30:00 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 15:30:00 2014] [debug] GET "/".
+[Tue Dec 30 15:30:00 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 15:30:00 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 15:30:00 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 15:30:00 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 15:30:00 2014] [debug] 404 Not Found (0.023739s, 42.125/s).
+[Tue Dec 30 15:33:50 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:34:36 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:41:16 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:41:16 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 15:43:40 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:43:40 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 15:44:48 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:44:48 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 15:45:04 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:45:04 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 15:45:15 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 15:45:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 16:04:39 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 16:08:15 2014] [debug] GET "/Unit/list".
+[Tue Dec 30 16:08:15 2014] [debug] Routing to controller "MiaNet::Controller::CRUD" and action "list".
+[Tue Dec 30 16:08:15 2014] [debug] Got table name: Unit
+[Tue Dec 30 16:08:15 2014] [debug] 200 OK (0.071658s, 13.955/s).
+[Tue Dec 30 16:08:24 2014] [debug] GET "/volume".
+[Tue Dec 30 16:08:24 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 16:08:24 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 16:08:24 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 16:08:24 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 16:08:24 2014] [debug] 404 Not Found (0.022555s, 44.336/s).
+[Tue Dec 30 17:22:48 2014] [debug] Reading configuration file "/here/docs/home/code/evohack/mia_net/mia_net.conf".
+[Tue Dec 30 17:24:16 2014] [debug] Your secret passphrase needs to be changed!!!
+[Tue Dec 30 17:30:30 2014] [debug] GET "/index.html/login".
+[Tue Dec 30 17:30:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:30:30 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:30:30 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:30:30 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:30:30 2014] [debug] 404 Not Found (0.036852s, 27.136/s).
+[Tue Dec 30 17:30:36 2014] [debug] GET "/index.html/protocols".
+[Tue Dec 30 17:30:36 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:30:36 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:30:36 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:30:36 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:30:36 2014] [debug] 404 Not Found (0.005993s, 166.861/s).
+[Tue Dec 30 17:31:56 2014] [debug] GET "/".
+[Tue Dec 30 17:31:56 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:31:56 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:31:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:31:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:31:56 2014] [debug] 404 Not Found (0.008316s, 120.250/s).
+[Tue Dec 30 17:32:05 2014] [debug] GET "/index.html/css/normalize.css".
+[Tue Dec 30 17:32:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:32:05 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:32:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:32:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:32:05 2014] [debug] 404 Not Found (0.005657s, 176.772/s).
+[Tue Dec 30 17:32:05 2014] [debug] GET "/index.html/lib/mithril-0.1.27.js".
+[Tue Dec 30 17:32:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:32:05 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:32:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:32:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:32:05 2014] [debug] 404 Not Found (0.006256s, 159.847/s).
+[Tue Dec 30 17:32:05 2014] [debug] GET "/index.html/css/skeleton.css".
+[Tue Dec 30 17:32:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:32:05 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:32:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:32:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:32:05 2014] [debug] 404 Not Found (0.005871s, 170.329/s).
+[Tue Dec 30 17:32:30 2014] [debug] GET "/index.html/css/normalize.css".
+[Tue Dec 30 17:32:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:32:30 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:32:30 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:32:30 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:32:30 2014] [debug] 404 Not Found (0.007160s, 139.665/s).
+[Tue Dec 30 17:32:30 2014] [debug] GET "/index.html/lib/mithril-0.1.27.js".
+[Tue Dec 30 17:32:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:32:30 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:32:30 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:32:30 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:32:30 2014] [debug] 404 Not Found (0.007653s, 130.668/s).
+[Tue Dec 30 17:32:30 2014] [debug] GET "/index.html/css/skeleton.css".
+[Tue Dec 30 17:32:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:32:30 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:32:30 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:32:30 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:32:30 2014] [debug] 404 Not Found (0.006217s, 160.849/s).
+[Tue Dec 30 17:43:22 2014] [debug] GET "/index.html/protocols".
+[Tue Dec 30 17:43:22 2014] [debug] Template "not_found.development.html.ep" not found.
+[Tue Dec 30 17:43:22 2014] [debug] Template "not_found.html.ep" not found.
+[Tue Dec 30 17:43:22 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Tue Dec 30 17:43:22 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Tue Dec 30 17:43:22 2014] [debug] 404 Not Found (0.006604s, 151.423/s).

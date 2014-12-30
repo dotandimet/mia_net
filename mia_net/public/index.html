@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Mia.Net</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+       rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <script src="lib/mithril-0.1.27.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- link rel="icon" type="image/png" href="favicon.png" -->
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+  <div class="container">
+    <div class="row"><div id="toolbar"></div></div>
+    <div class="row">
+      <div class="one-half column" id="workarea">
+        <h4>Basic Page</h4>
+        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      </div>
+    </div>
+  </div>
+
+<!--   End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+  <script>
+  var Mia = {};
+  Mia.helpers = {};
+  Mia.helpers.table = function(ctrl) {
+      return m('table', [
+            m('thead',
+              m('tr',
+                ctrl.headers.map( function(head) {
+                  return m('th', head);
+                })
+              )
+            ),
+          m('tbody',
+            ctrl.rows.map(function(row) {
+              return m('tr',
+                row.map(function(cell) { 
+                  return m('td', cell)
+                }) )
+            } )
+          ) ]);
+  };
+
+  Mia.toolbar = {};
+  Mia.toolbar.controller = function() {
+    this.buttons = [ { path: '/protocols', title: 'Protocols' },
+                     { path: '/runs', title: 'Runs' },
+                     { path: '/login', title: 'Login' } ];
+    return this;
+  };
+
+  Mia.toolbar.view = function(ctrl) {
+    var active = m.route();
+    return ctrl.buttons.map(function(button) {
+                return m('a.button', { config: m.route, href: button.path,
+                class: (( button.path === active ) ? 'primary' : '') }, button.title)
+            });
+  };
+
+  Mia.workarea = {};
+  Mia.workarea.controller = function() { };
+  Mia.workarea.view = function(ctrl) {
+    return m('div', m('h4', "blah"));
+  };
+
+  Mia.login = {};
+  Mia.login.User = { };
+  Mia.login.controller = function() {
+    this.doLogin = function() {
+       m.route('/protocols');
+    }
+  };
+  Mia.login.view = function(ctrl) {
+    return m('form', [
+          m('label', [ 'User:',
+                       m('input', { type: 'text', name: 'name' })
+                     ]),
+          m('label', [ 'Password:',
+                       m('input', { type: 'password', name: 'password' })
+                     ]),
+          m('input', { type: 'submit', value: 'Login', onclick: ctrl.doLogin })
+        ]);
+  };
+
+  Mia.protocols = {};
+  Mia.protocols.data = [
+    {ID: 7, Name: 'burn things', Date: '25-12-2014' },
+    {ID: 8, Name: 'burn things slowly', Date: '24-12-2014' }
+  ];
+  Mia.protocols.controller = function() {
+    var headers = Object.keys(Mia.protocols.data[0]);
+    this.headers = headers;
+    var rows = [];
+    Mia.protocols.data.map(function(item) {
+        var values = headers.map(function(header){
+          return item[header];
+        });
+        rows.push(values);
+    });
+    this.rows = rows;
+    return this;
+  };
+
+  Mia.protocols.view = function(ctrl) {
+    return Mia.helpers.table(ctrl);
+  };
+
+//model
+var app = {};
+app.PageList = function() {
+    return m.request({method: "GET", url: "/Unit/list"})
+    .then(function(res){ return res.Unit; });
+};
+
+//controller
+app.controller = function() {
+    var pages = app.PageList();
+    return {
+        pages: pages,
+        rotate: function() {
+            pages().push(pages().shift());
+        }
+    }
+};
+
+//view
+app.view = function(ctrl) {
+    return [
+        ctrl.pages().map(function(page) {
+            return m("a", {href: page.type}, page.name);
+        }),
+        m("button", {onclick: ctrl.rotate}, "Rotate links")
+    ];
+};
+
+// m.module(document.body, Mia.app);
+m.module(document.getElementById('toolbar'), Mia.toolbar);
+
+m.route(document.getElementById('workarea'), '/login',
+  { 
+    '/login': Mia.login,
+    '/units' : app,
+    '/protocols' : Mia.protocols,
+    '/runs': Mia.runs
+    });
+
+</script>
+
+</html>
