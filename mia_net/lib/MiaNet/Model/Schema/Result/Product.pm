@@ -29,7 +29,7 @@ __PACKAGE__->table("products");
   is_auto_increment: 1
   is_nullable: 0
 
-=head2 product_number
+=head2 product_catalog
 
   data_type: 'varchar2'
   is_nullable: 1
@@ -69,7 +69,7 @@ __PACKAGE__->table("products");
 __PACKAGE__->add_columns(
   "id",
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
-  "product_number",
+  "product_catalog",
   { data_type => "varchar2", is_nullable => 1, size => 50 },
   "name",
   { data_type => "varchar2", is_nullable => 0, size => 600 },
@@ -97,17 +97,17 @@ __PACKAGE__->set_primary_key("id");
 
 =head1 UNIQUE CONSTRAINTS
 
-=head2 C<product_number_unique>
+=head2 C<product_catalog_unique>
 
 =over 4
 
-=item * L</product_number>
+=item * L</product_catalog>
 
 =back
 
 =cut
 
-__PACKAGE__->add_unique_constraint("product_number_unique", ["product_number"]);
+__PACKAGE__->add_unique_constraint("product_catalog_unique", ["product_catalog"]);
 
 =head1 RELATIONS
 
@@ -142,8 +142,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-12-30 12:45:33
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:nE6dd0yI6UzXMObt3QLJiA
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-12-31 04:03:28
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:eLTcp9gOGrQwC0HucPr8oQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

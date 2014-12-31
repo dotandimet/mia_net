@@ -21,7 +21,8 @@ sub startup {
 
   # Router
   my $r = $self->routes;
-
+  $r->get('/Products/for/:protocol_id')->to('controller' => 'Products', action => 'fetch_for_protocol');
+  $r->get('/Protocol/:id/details')->to('controller' => 'Protocol', action => 'details');
   $r->get('/:table/list')->to('controller' => 'CRUD', 'action' => 'list');
   $r->post('/:table/create')->to('controller' => 'CRUD', 'action' => 'create');
 }

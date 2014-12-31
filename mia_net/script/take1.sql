@@ -84,8 +84,8 @@ create table materials (
 );
 
 create table products (
-  id integer primary key,
-  product_number varchar2(50) unique,
+  id integer primary key autoincrement,
+  product_catalog varchar2(50) unique,
   name varchar2(600) not null,
   manufacturer varchar2(50),
   supplier varchar2(50),

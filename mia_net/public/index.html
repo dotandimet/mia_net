@@ -34,11 +34,9 @@
   ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
   <div class="container">
     <div class="row"><div id="toolbar"></div></div>
-    <div class="row">
-      <div class="twelve columns" id="workarea">
+      <div id="workarea">
         <h4>Basic Page</h4>
         <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
     </div>
   </div>
 
@@ -48,19 +46,26 @@
   <script>
   var Mia = {};
   Mia.helpers = {};
+  Mia.helpers.values = function(obj) {
+    var vals = [];
+    for (var i in obj) {
+      vals.push(obj[i]);
+    }
+    return vals;
+  };
   Mia.helpers.table = function(ctrl) {
       return m('table', [
             m('thead',
               m('tr',
-                ctrl.headers.map( function(head) {
+                ctrl.headers().map( function(head) {
                   return m('th', head);
                 })
               )
             ),
           m('tbody',
-            ctrl.rows.map(function(row) {
+            ctrl.rows().map(function(row) {
               return m('tr',
-                row.map(function(cell) { 
+                row.map(function(cell) {
                   return m('td', cell)
                 }) )
             } )
@@ -110,20 +115,20 @@
   };
 
   Mia.protocols.controller = function() {
-    var list = Mia.protocols.Full();
-    console.log(typeof list[0]);
-    console.log(list[0]);
-    console.log(list);
-    var headers = Object.keys(list[0]);
-    this.headers = headers;
-    var rows = [];
-    list.map(function(item) {
-        var values = headers.map(function(header){
-          return item[header];
-        });
-        rows.push(values);
-    });
-    this.rows = rows;
+    this.list = Mia.protocols.Full();
+    this.headers = function() {
+      return [ "id", "Name", "version", "status", "Description", "Quantity", "Actions"];
+    }.bind(this);
+    this.rows = function() {
+      return this.list().map(function(item) {
+        return [ item.id, item.name,
+                 item.version, item.status,
+                 item.description,
+            item.base_quantity + ' ' + item.base_units,
+            m('a', { href: '/protocols/show/' + item.id, config: m.route }, 'more')
+         ] ;
+      });
+    }.bind(this);
     return this;
   };
 
@@ -161,17 +166,119 @@ Mia.runs.view = function(ctrl) {
     ];
 };
 
-Mia.protocolEdit = {};
-Mia.protocolEdit.controller = function() {
+Mia.editProtocol = {};
+Mia.editProtocol.controller = function() {
   this.id = m.route.param('id') || 'nada';
   console.log(this.id);
 }
 
-Mia.protocolEdit.view = function(ctrl) {
+Mia.editProtocol.view = function(ctrl) {
   return m('h4', ctrl.id);
 }
 
+Mia.Protocol = function(id) {
+    return m.request({method: "GET", url: "/Protocol/"+id+"/details"})
+    .then(function(res){ return res.Protocol; });
+};
 
+Mia.Products = function(id) {
+    return m.request({method: "GET", url: "/Products/for/" + id});
+};
+
+Mia.showProtocol = {};
+Mia.showProtocol.controller = function() {
+  this.id = m.route.param('id') || 'nada';
+  this.protocol = Mia.Protocol(this.id);
+  this.products = Mia.Products(this.id);
+  return this;
+}
+
+Mia.showProtocol.view = function(ctrl) {
+  var protocol = ctrl.protocol();
+  var stage;
+  return [
+  m('div.row', [
+      m('div.columns.eight', [ m('h2', protocol.name), m('h3', protocol.description) ]),
+      m('div.columns.two',
+        [ m('p', [ 'Version:', m('i', protocol.version) ]),
+          m('p', [ 'Status:', m('b', protocol.status) ]),
+          m('p', [ 'Quantity:', m('b', protocol.base_quantity + ' ' + protocol.base_units) ]),
+          m('a.button', { href: 'protocols/edit/' + protocol.id, config: m.route }, 'Edit Protocol')
+         ])
+  ]),
+  m('div.row',
+    m('div.one-half.column',
+  protocol.steps.sort(function(a,b) {
+      return ( a.step < b.step) ? -1 : (a.step > b.step ) ? 1 : 0;
+  }).map(function(step) {
+      var els = [];
+      if (!stage || step.stage.id !== stage) {
+        els.push(m('h4', step.stage.title + '. ' + step.stage.description));
+        stage = step.stage.id;
+      }
+      els.push( m('h5', { style: 'margin-left: 10px' }, step.step + '. ' + step.text) );
+      if (step.ingredients.length > 0) {
+        els.push( m('p', JSON.stringify(step.ingredients)) )
+      }
+      return els;
+  })
+  ) )
+  ];
+};
+
+Mia.helpers.protocolStub = function() {
+  return {
+      name : '',
+      description: '',
+      version: 1,
+      status: 'draft',
+      base_quantity: 0,
+      base_units: 'ml',
+      steps: []
+   };
+};
+
+Mia.editProtocol.controller = function() {
+  this.id = m.route.param('id') || 'nada';
+  this.protocol = (this.id) ? Mia.Protocol(this.id) : Mia.helpers.protocolStub;
+  this.products = Mia.Products(this.id);
+  return this;
+};
+
+Mia.editProtocol.view = function(ctrl) {
+  var protocol = ctrl.protocol();
+  var stage;
+  return [
+  m('div.row', [
+      m('div.columns.eight', [ m('h2', protocol.name), m('h3', protocol.description) ]),
+      m('div.columns.two',
+        [ m('p', [ 'Version:', m('i', protocol.version) ]),
+          m('p', [ 'Status:', m('b', protocol.status) ]),
+          m('p', [ 'Quantity:', m('b', protocol.base_quantity + ' ' + protocol.base_units) ]),
+          m('a.button', { href: 'protocols/edit/' + protocol.id, config: m.route }, 'Edit Protocol')
+         ])
+  ]),
+  m('div.row',
+    m('div.one-half.column',
+  protocol.steps.sort(function(a,b) {
+      return ( a.step < b.step) ? -1 : (a.step > b.step ) ? 1 : 0;
+  }).map(function(step) {
+      var els = [];
+      if (!stage || step.stage.id !== stage) {
+        els.push(m('h4', step.stage.title + '. ' + step.stage.description));
+        stage = step.stage.id;
+      }
+      els.push( m('h5', { style: 'margin-left: 10px' }, step.step + '. ' + step.text ) );
+      step.ingredients.forEach(function(ing){
+          var products = ctrl.products();
+          var product = products[ing.product_id];
+          els.push( m('p', ing.quantity + ' ' + ing.units + ' of ' + product.name + ' [ ' + product.product_catalog + ' ]') );
+      });
+        return els;
+  })
+  ) )
+  ];
+}
 // m.module(document.body, Mia.app);
 m.module(document.getElementById('toolbar'), Mia.toolbar);
 
@@ -179,10 +286,14 @@ m.route(document.getElementById('workarea'), '/login',
   {
     '/login': Mia.login,
     '/protocols' : Mia.protocols,
-    '/protocols/edit/:id' : Mia.protocolEdit,
-    '/protocols/create' : Mia.protocolEdit,
+    '/protocols/show/:id' : Mia.showProtocol,
+    '/protocols/edit/:id' : Mia.editProtocol,
+    '/protocols/run/:id' : Mia.runProtocol,
+    '/protocols/create' : Mia.editProtocol,
     '/runs': Mia.runs
-   })
+   });
+
+Mia.fixture = {"Protocol":{"status":"draft","base_units":"liter\n","id":1,"ingredients":[{"step_id":5,"units":"gr","quantity":4.68,"product_id":112,"id":2,"protocol_id":1,"product":{"supplier":"TIVAN","id":112,"is_stock":null,"concentration":null,"product_catalog":"MSP10-50LT","manufacturer":"Caisson Labs","name":"MURASHIGE & SKOOG NITRATE FREE\nMEDIUM W\/ GAMBORG VITAMINS"}},{"product":{"supplier":"Getter Bio-Med","id":131,"name":"sucrose","manufacturer":"Duchefa","product_catalog":"S0809.5000","concentration":null,"is_stock":null},"protocol_id":1,"id":3,"quantity":240,"product_id":131,"step_id":6,"units":"gr"},{"product":{"supplier":"","id":75,"concentration":null,"product_catalog":"GVP01-1LT-stock","manufacturer":"","name":"GVP01-1LT-stock","is_stock":1},"protocol_id":1,"id":4,"quantity":6,"product_id":75,"step_id":7,"units":"ml"},{"quantity":640,"product_id":6,"units":"ml","step_id":8,"product":{"supplier":"","id":6,"product_catalog":"1.01188.1000-stock","concentration":null,"manufacturer":"","name":"1.01188.1000-stock","is_stock":1},"protocol_id":1,"id":5},{"quantity":90,"product_id":120,"step_id":13,"units":"gr","product":{"is_stock":null,"concentration":null,"product_catalog":"P1001.5000","manufacturer":"Duchefa","name":"Plant agar","id":120,"supplier":"Getter Bio-Med"},"protocol_id":1,"id":6}],"version":1,"base_quantity":12,"name":"Arabidopsis Validation Medium Perparation Normal (12 L)\n","description":"Caisson MS modified + Vitamins\n","steps":[{"ingredients":[],"step":1,"protocol_id":1,"record_fields":[],"id":1,"text":"Power up the unit\n","stage":{"title":"1","id":1,"protocol_id":1,"description":"Connections and power up\n"}},{"id":2,"text":"Control the draining valve is tightened up and closed\n","stage":{"protocol_id":1,"title":"1","id":1,"description":"Connections and power up\n"},"step":2,"ingredients":[],"protocol_id":1,"record_fields":[]},{"id":3,"stage":{"description":"Product preparation\n","protocol_id":1,"id":2,"title":"2\n"},"text":"Make sure the stirring blade is placed properly\n","ingredients":[],"step":3,"record_fields":[],"protocol_id":1},{"ingredients":[],"step":4,"protocol_id":1,"record_fields":[],"id":4,"text":"Measure and pour  into the vessel\n","stage":{"description":"Product preparation\n","id":2,"title":"2\n","protocol_id":1}},{"ingredients":[{"quantity":4.68,"product_id":112,"step_id":5,"units":"gr","protocol_id":1,"id":2}],"step":5,"record_fields":[{"field_type":"Calculated","id":2,"field_order":2,"field_name":"Quantity1","step_id":5},{"step_id":5,"field_name":"Evo Batch\n","id":1,"field_type":"Number","field_order":1}],"protocol_id":1,"id":5,"stage":{"protocol_id":1,"id":2,"title":"2\n","description":"Product preparation\n"},"text":"Measure and add\n"},{"id":6,"stage":{"id":2,"title":"2\n","protocol_id":1,"description":"Product preparation\n"},"text":"Measure and add\n","ingredients":[{"protocol_id":1,"id":3,"product_id":131,"quantity":240,"step_id":6,"units":"gr"}],"step":6,"record_fields":[{"id":9,"field_type":"Calculated","field_order":2,"step_id":6,"field_name":"Quantity1"},{"field_order":1,"id":8,"field_type":"Number","field_name":"Evo Batch\n","step_id":6}],"protocol_id":1},{"ingredients":[{"protocol_id":1,"id":4,"product_id":75,"quantity":6,"step_id":7,"units":"ml"}],"step":7,"protocol_id":1,"record_fields":[{"field_name":"Quantity1","step_id":7,"field_type":"Calculated","id":11,"field_order":2},{"field_name":"Evo Batch\n","step_id":7,"field_order":1,"id":10,"field_type":"Number"}],"id":7,"stage":{"id":2,"title":"2\n","protocol_id":1,"description":"Product preparation\n"},"text":"Measure and pour \n"},{"id":8,"text":"Measure and pour \n","stage":{"title":"2\n","id":2,"protocol_id":1,"description":"Product preparation\n"},"ingredients":[{"protocol_id":1,"id":5,"product_id":6,"quantity":640,"step_id":8,"units":"ml"}],"step":8,"protocol_id":1,"record_fields":[{"field_name":"Quantity1","step_id":8,"id":13,"field_type":"Calculated","field_order":2},{"field_order":1,"field_type":"Number","id":12,"step_id":8,"field_name":"Evo Batch\n"}]},{"record_fields":[{"step_id":9,"field_name":"completed volume","field_order":1,"field_type":"Number","id":14}],"protocol_id":1,"step":9,"ingredients":[],"text":"Pour to complete volume (12 l = 1.250 liter)\n","stage":{"protocol_id":1,"title":"2\n","id":2,"description":"Product preparation\n"},"id":9},{"step":10,"ingredients":[],"protocol_id":1,"record_fields":[],"id":10,"stage":{"description":"Product preparation\n","id":2,"title":"2\n","protocol_id":1},"text":"The stirring blade may be primed to start mixing ingredients before starting the cycle:\n\n\nUnder the Â« OPERATION Â» tab select the Â« Stirrer Â» menu.\n\nPress ENTER to start stirring. Pressing again the ENTER key stops stirring.\n"},{"step":11,"ingredients":[],"protocol_id":1,"record_fields":[{"field_name":"Final pH\n","step_id":11,"field_order":2,"field_type":"Number","id":16},{"id":15,"field_type":"Number","field_order":1,"field_name":"pH start\n","step_id":11}],"id":11,"stage":{"title":"3\n","id":3,"protocol_id":1,"description":"PH titration\n"},"text":"Titrate to pH=5.80-5.82 with: 10M\/1M\/0.1M KOH \/ HCl\n"},{"protocol_id":1,"record_fields":[{"field_name":"HCl Batch\n","step_id":12,"field_order":2,"field_type":"Number","id":18},{"field_order":1,"id":17,"field_type":"Number","step_id":12,"field_name":"KHO Batch\n"}],"step":12,"ingredients":[],"stage":{"description":"PH titration\n","protocol_id":1,"title":"3\n","id":3},"text":"Record batch of base\/acid used\n","id":12},{"id":13,"stage":{"id":4,"title":"4","protocol_id":1,"description":"Plant agar\n"},"text":"Weigh and add\n","ingredients":[{"product_id":120,"quantity":90,"units":"gr","step_id":13,"protocol_id":1,"id":6}],"step":13,"record_fields":[],"protocol_id":1},{"ingredients":[],"step":14,"protocol_id":1,"record_fields":[],"id":14,"text":"Ensure that the lid removable seal is placed properly and close the lid, pressing strongly on the lidâs flange to engage the safety switch\n","stage":{"description":"Lid closing and cap checking\n","id":5,"title":"5","protocol_id":1}},{"record_fields":[],"protocol_id":1,"step":15,"ingredients":[],"text":"Make sure the adding and priming caps are correctly closed, and the filter is placed\n","stage":{"title":"5","id":5,"protocol_id":1,"description":"Lid closing and cap checking\n"},"id":15},{"record_fields":[],"protocol_id":1,"step":16,"ingredients":[],"text":"Using the arrow key,\n select the Â« Program Â» menu, \nand dial the code of the program to be started - \n\n03 - Validation 70 Cd\n","stage":{"id":6,"title":"6","protocol_id":1,"description":"User Selection And Program Starting Up\n"},"id":16},{"stage":{"protocol_id":1,"title":"6","id":6,"description":"User Selection And Program Starting Up\n"},"text":"Dial the volume to be prepared (5.0 to 28.L) and press ENTER\n","id":17,"record_fields":[],"protocol_id":1,"ingredients":[],"step":17},{"text":"Once caps and lid are closed, start the cycle using the ENTER key\n","stage":{"description":"User Selection And Program Starting Up\n","protocol_id":1,"id":6,"title":"6"},"id":18,"record_fields":[],"protocol_id":1,"step":18,"ingredients":[]},{"stage":{"description":"User Selection And Program Starting Up\n","protocol_id":1,"id":6,"title":"6"},"text":"The remaining time is:","id":19,"record_fields":[{"field_order":1,"field_type":"Time","id":19,"step_id":19,"field_name":"Remaining time"}],"protocol_id":1,"ingredients":[],"step":19},{"ingredients":[],"step":20,"protocol_id":1,"record_fields":[],"id":20,"stage":{"title":"7","id":7,"protocol_id":1,"description":"End of Cycle and Dispensing - Priming tubing installation\n"},"text":"Remove the priming cap aseptically\n"},{"ingredients":[],"step":21,"protocol_id":1,"record_fields":[],"id":21,"text":"Screw in the priming tubing nut and insert the priming nozzle in the autopreparator\n","stage":{"protocol_id":1,"title":"7","id":7,"description":"End of Cycle and Dispensing - Priming tubing installation\n"}},{"id":22,"stage":{"description":"End of Cycle and Dispensing - Priming tubing installation\n","id":7,"title":"7","protocol_id":1},"text":"Install the priming tube on a pump (DOSE IT P803 ) Then follow the instructions of using it\n","step":22,"ingredients":[],"record_fields":[],"protocol_id":1},{"protocol_id":1,"record_fields":[],"ingredients":[],"step":23,"text":"Once dispensing is over, press the âCANCELâ key to acknowledge the end of the cycle\n","stage":{"description":"End of Cycle and Dispensing - Priming tubing installation\n","protocol_id":1,"title":"7","id":7},"id":23},{"stage":{"description":"Power off\n","title":"8","id":8,"protocol_id":1},"text":"Once dispensing is over, open safety cover and switch off the unit\n","id":24,"protocol_id":1,"record_fields":[],"ingredients":[],"step":24},{"protocol_id":1,"record_fields":[],"ingredients":[],"step":25,"stage":{"description":"CLEANING\n","protocol_id":1,"title":"9","id":9},"text":"While cleaning the Auto-Preparator Use only poly cellulose paper !\n","id":25}]}};
 </script>
 
 </html>
