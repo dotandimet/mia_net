@@ -61,4 +61,4 @@ t/basic.t
 t/login.t
 templates/example/welcome.html.ep
 templates/layouts/default.html.ep
-templates/ui/show.html.ep
+templates/UI/show.html.ep
