@@ -20,9 +20,7 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <script src="lib/mithril-0.1.21.js"></script>
+%= asset 'app.css'
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- link rel="icon" type="image/png" href="favicon.png" -->
@@ -42,7 +40,9 @@
 
 <!--   End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="app.js"> </script>
+  <!-- script src="app.js"> </script -->
+
+%= asset 'app.js'
 </body>
 
 </html>
