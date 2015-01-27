@@ -12,3 +12,4 @@
 /META.*
 /MYMETA.*
 db/*.db
+public/packed*
